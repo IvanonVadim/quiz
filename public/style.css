@@ -9,21 +9,129 @@
   background-repeat: no-repeat;
   background-size: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ThemesCard{
+  background-image: url("https://img.badfon.ru/wallpaper/big/f/14/fallout-3-ubezhische-101-fallout.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.questionPage {
+  background-image: url("https://cdn.mos.cms.futurecdn.net/HiAqRxvtKqvxzVTWSov7bA.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.choseCard{
+  background-color: rgb(177, 181, 180);
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  text-decoration: black;
 }
 .inputName {
   /* width: 400px; */
-  background-color: red;
+  
+  width: 20px;
+  display: flex;
+  
 }
 .divInput {
-  /* width: 400px; */
-  background-color: aquamarine;
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  border: 5px solid black;
+  background-color: rgb(177, 181, 180);
   display: flex;
-  justify-content: center;
+   justify-content: space-evenly;
   align-items: center;
+  padding: 20px;
+  
+  
   /* margin-left: 100px; */
 }
 .formdiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     display: flex;
+    justify-content: space-around;
+    
+    
+    
+}
+.inputBtn {
+  font-weight: bold;
+  background-color: rgb(86, 95, 92);
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  /* margin-right: 20px; */
+}
+.send, .check {
+  font-weight: bold;
+  background-color: rgb(86, 95, 92);
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: large;
+}
+.nav-wrapper {
+  
+  background-color: rgb(86, 95, 92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputForm {
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  border: 5px solid black;
+  background-color: rgb(177, 181, 180);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+.left  {
+  font-size: xx-large;
+}
+
+#errorQuestion {
+  font-weight: bold;
+  font-size: x-large;
+  background-color: rgb(86, 95, 92);
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }

@@ -27,9 +27,9 @@ router.post('/', async (req, res) => {
         const quers= await Question.findOne({where:{id}})
         console.log(quers)
         if(answerQuestion === quers.answerQuestion){
-   res.json({message:'Молодец ты ответил правильно'})
+   res.json({message:'Молодец ты ответил правильно 👍'})
         }else{
-            res.json({message:`Не верно6,верный ответ: ${quers.answerQuestion}`})
+            res.json({message:`Не верно ☹,верный ответ: ${quers.answerQuestion}`})
         }
     } catch ({error}) {
         console.log(error);
