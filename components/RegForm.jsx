@@ -5,10 +5,10 @@ function RegForm({ title }) {
   return (
     <Layout title={title}>
       <div className="divReg">
-          <form className="formdiv">
+          <form  action='/regForm' method="POST" className="formdiv">
             <div className="divInput">
               <input className="inputName" name="name" />
-              <button>Жми</button>
+         <button type="submit">Жми</button>
             </div>
           </form>
       </div>
