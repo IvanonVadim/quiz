@@ -4,7 +4,6 @@ const Layout = require("./Layout");
 
 function Question ({title,question,indexquestion, user}) {
 return(
- <div>
 
     <Layout title={title} user={user}>
         <div className="questionPage">

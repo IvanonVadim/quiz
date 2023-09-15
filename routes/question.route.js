@@ -26,12 +26,14 @@ router.post('/', async (req, res) => {
      
         const {answerQuestion,id} = req.body
         const quers= await Question.findOne({where:{id}})
+        const {user}=res.app.locals
+        const score=await User.findOne({where:{id:user.id}})
 
-         const score=await User.findOne({where:{id:34}})
         let bal=score.score
            if(answerQuestion.toLowerCase() === quers.answerQuestion.toLowerCase()){
             bal+=100
-           await User.update({score:bal},{where:{id:34}})
+           await User.update({score:bal},{where:{id:user.id}})
+           res.app.locals.user.score=bal+=100
    res.json({message:'Молодец ты ответил правильно 👍'})
         }else{
             res.json({message:`Не верно ☹,верный ответ: ${quers.answerQuestion}`})
