@@ -2,9 +2,9 @@ const React = require("react");
 const Layout = require("./Layout");
 
 
-function Question ({title,question,indexquestion}) {
+function Question ({title,question,indexquestion, user}) {
 return(
-    <Layout title={title}>
+    <Layout title={title} user={user}>
         <div>
             <h1>{question.textQuestion}</h1>
             <div>

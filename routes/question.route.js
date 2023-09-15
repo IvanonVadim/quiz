@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Question } = require('../db/models');
+const { Question, User } = require('../db/models');
+
 
 const QuestionList = require('../components/QuestionList');
 
@@ -25,11 +26,16 @@ router.post('/', async (req, res) => {
      
         const {answerQuestion,id} = req.body
         const quers= await Question.findOne({where:{id}})
-        console.log(quers)
-        if(answerQuestion === quers.answerQuestion){
+        const score=await User.findOne({where:{id:34}})
+        let bal=score.score
+        console.log(bal);
+        if(answerQuestion.toLowerCase() === quers.answerQuestion.toLowerCase()){
+            bal+=100
+            console.log(bal);
+           await User.update({score:bal},{where:{id:34}})
    res.json({message:'Молодец ты ответил правильно'})
         }else{
-            res.json({message:`Не верно6,верный ответ: ${quers.answerQuestion}`})
+            res.json({message:`Не верно,верный ответ: ${quers.answerQuestion}`})
         }
     } catch ({error}) {
         console.log(error);
