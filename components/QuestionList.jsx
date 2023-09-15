@@ -4,10 +4,13 @@ const Layout = require("./Layout");
 
 function Question ({title,question,indexquestion, user}) {
 return(
+ <div>
+
     <Layout title={title} user={user}>
-        <div>
+        <div className="questionPage">
+
             <h1>{question.textQuestion}</h1>
-            <div>
+            <div className="inputForm">
                 <form id='formId' action="" data-id={question.id}>
                 <input name='answer'type="text" /> <button type='submit' className="send">отправить ответ</button>
                 </form>

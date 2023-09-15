@@ -8,7 +8,7 @@ function RegForm({ title }) {
           <form  action='/regForm' method="POST" className="formdiv">
             <div className="divInput">
               <input className="inputName" name="name" />
-         <button type="submit">Жми</button>
+         <button className="inputBtn" type="submit">Жми</button>
             </div>
           </form>
       </div>
