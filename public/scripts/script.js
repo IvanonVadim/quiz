@@ -1,4 +1,3 @@
-console.log('qweqw')
 
 const formId = document.querySelector('#formId');
 

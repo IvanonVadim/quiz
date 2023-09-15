@@ -2,10 +2,13 @@ const React = require("react");
 const Layout = require("./Layout");
 
 
-function Question ({title,question,indexquestion}) {
+function Question ({title,question,indexquestion, user}) {
 return(
-    <Layout title={title}>
+ <div>
+
+    <Layout title={title} user={user}>
         <div className="questionPage">
+
             <h1>{question.textQuestion}</h1>
             <div className="inputForm">
                 <form id='formId' action="" data-id={question.id}>
